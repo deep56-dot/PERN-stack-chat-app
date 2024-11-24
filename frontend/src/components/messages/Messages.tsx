@@ -1,4 +1,4 @@
-import React, { MutableRefObject } from "react";
+import  { MutableRefObject } from "react";
 import useChatScroll from "../../hooks/useChatScroll";
 import useGetMessages from "../../hooks/useGetMessages";
 import useListenMessage from "../../hooks/useListenMessage";
@@ -7,7 +7,7 @@ import Message from "./Message";
 
 const Messages = () => {
 	const { loading, messages } = useGetMessages();
-	const ref = useChatScroll(messages) as React.MutableRefObject<HTMLDivElement>;
+	const ref = useChatScroll(messages) as MutableRefObject<HTMLDivElement>;
 	useListenMessage()
 	return (
 		<div className='px-4 flex-1 overflow-auto' ref={ref}>
